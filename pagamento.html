@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h2>Pagamento</h2>
+    <form id="form-pagamento">
+      <label>Email:
+        <input type="email" required>
+      </label><br>
+      <label>Password:
+        <input type="password" required>
+      </label><br>
+      <label>Metodo di pagamento:
+        <select required>
+          <option value="">Seleziona</option>
+          <option>Visa</option>
+          <option>Mastercard</option>
+          <option>PayPal</option>
+        </select>
+      </label><br>
+      <button type="submit">Conferma pagamento</button>
+    </form>
+    <p id="conferma" style="display: none; color: green; font-weight: bold;">Pagamento completato! Torna alla <a href="index.html">home</a>.</p>
+  </main>
+
+  <script>
+    const form = document.getElementById('form-pagamento');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      document.getElementById('conferma').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
