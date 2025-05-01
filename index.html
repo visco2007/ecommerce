@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vetrina E-Commerce</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viscomi Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,11 +20,11 @@
     <h3>Carrello</h3>
     <ul id="lista-carrello"></ul>
     <p id="totale">Totale: 0€</p>
-    <button id="checkout">Vai al pagamento</button>
+    <a href="pagamento.html"><button id="paga">Vai al pagamento</button></a>
   </aside>
 
   <footer>
-    <p>Viscomi Shop, 20005, Pogliano Milanese, 3834567124</p>
+    <p>Viscomi Shop, 20005, Pogliano Milanese(MI), 3472373756</p>
   </footer>
 
   <script>
@@ -41,10 +41,6 @@
       totale += parseFloat(prodotto.prezzo);
       totaleElemento.textContent = 'Totale: ' + totale.toFixed(2) + '€';
     }
-
-    document.getElementById('checkout').addEventListener('click', function() {
-      window.location.href = 'pagamento.html';
-    });
 
     fetch('prodotti.json')
       .then(function(response) {
@@ -75,4 +71,5 @@
   </script>
 </body>
 </html>
+
 
