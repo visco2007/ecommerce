@@ -1,122 +1,135 @@
 body {
+  font-family: Verdana, sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
   background-color: white;
   color: black;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
 
 header {
   background-color: green;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: space-around;
   padding: 0;
-  margin: 0;
+  margin-top: 1em;
 }
 
-nav a {
+nav ul li {
+  display: inline;
+  margin: 0 1em;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 main {
-  padding: 1rem;
-  margin-right: 300px;
-  text-align: center;
+  padding: 2em;
 }
 
 h2 {
-  text-align: center;
-  color: green;
+  color: darkgreen;
 }
 
+/* Vetrina prodotti */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
 }
 
 .card {
-  background-color: white;
   border: 2px solid green;
+  padding: 1em;
+  width: 200px;
+  text-align: center;
+  background-color: lightgreen;
   border-radius: 10px;
-  padding: 1rem;
-
-}
-
-.card:hover {
-  transform: scale(1.02);
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 6px;
-}
-
-.card h3 {
-  margin: 0.5rem 0 0.2rem;
-}
-
-.card p {
-  font-size: 0.9rem;
-  margin: 0.2rem 0;
+  border-radius: 5px;
 }
 
 .price {
   font-weight: bold;
-  color: green;
+  color: darkgreen;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: green;
+  background-color: darkgreen;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 0.5em 1em;
   cursor: pointer;
+  margin-top: 0.5em;
+  border-radius: 5px;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
+.btn:hover {
   background-color: green;
-  color: white;
-  margin-top: auto;
 }
 
 #carrello {
   position: fixed;
   right: 0;
-  top: 80px;
-  width: 280px;
-  background-color: white;
-  border-left: 2px solid green;
-  padding: 1rem;
-  height: calc(100% - 80px);
-  overflow-y: auto;
-
+  top: 100px;
+  width: 250px;
+  background-color: lightgrey;
+  padding: 1em;
+  border-left: 3px solid darkgreen;
+  text-align: left;
 }
 
 #carrello h3 {
-  color: green;
-  margin-top: 0;
+  text-align: center;
 }
 
 #lista-carrello {
   list-style: none;
-  padding-left: 0;
-  margin: 0 0 1rem 0;
+  padding: 0;
 }
+
+#totale {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+#checkout {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+#checkout:hover {
+  background-color: darkgreen;
+}
+
+footer {
+  background-color: green;
+  color: white;
+  padding: 1em;
+  position: relative;
+  margin-top: 2em;
+}
+
