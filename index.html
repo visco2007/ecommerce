@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vetrina E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Viscomi Shop</h1>
+  </header>
+
+  <main>
+    <h2>Prodotti in evidenza</h2>
+    <div id="vetrina" class="grid"></div>
+  </main>
+
+  <aside id="carrello">
+    <h3>Carrello</h3>
+    <ul id="lista-carrello"></ul>
+    <p id="totale">Totale: 0€</p>
+  </aside>
+
+  <footer>
+    <p>Viscomi Shop</p>
+  </footer>
+  <script>
+    const container = document.getElementById('vetrina');
+    const listaCarrello = document.getElementById('lista-carrello');
+    const totaleElemento = document.getElementById('totale');
+    let totale = 0;
+  
+    function aggiungiAlCarrello(prodotto) {
+      const li = document.createElement('li');
+      li.textContent = prodotto.nome + ' - ' + prodotto.prezzo + '€';
+      listaCarrello.appendChild(li);
+  
+      totale += parseFloat(prodotto.prezzo);
+      totaleElemento.textContent = 'Totale: ' + totale.toFixed(2) + '€';
+    }
+  
+    fetch('prodotti.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(prodotti) {
+        prodotti.forEach(function(prodotto) {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = 
+            '<img src="' + prodotto.immagine + '" alt="' + prodotto.nome + '">' +
+            '<h3>' + prodotto.nome + '</h3>' +
+            '<p>' + prodotto.descrizione + '</p>' +
+            '<p class="price">' + prodotto.prezzo + '€</p>' +
+            '<button class="btn">Aggiungi al carrello</button>';
+  
+          const bottone = card.querySelector('button');
+          bottone.addEventListener('click', function() {
+            aggiungiAlCarrello(prodotto);
+          });
+  
+          container.appendChild(card);
+        });
+      })
+      .catch(function(error) {
+        console.error('Errore nel caricamento prodotti:', error);
+      });
+  </script>
+</body>
+</html>
