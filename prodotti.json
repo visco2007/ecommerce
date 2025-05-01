@@ -5,20 +5,20 @@
        "nome":"Samsung Galaxy s20",
        "descrizione":"Display OLED 6.5\", 128GB, 5G",
        "prezzo":"399 euro",
-       "immagine":"https://www.google.it/url?sa=i&url=https%3A%2F%2Fwww.amazon.it%2FSmartphone-Fotocamere-Posteriori-Espandibili-Batteria%2Fdp%2FB084LF45RL&psig=AOvVaw2ImjvuJ8ddgiomnqu8j5Uy&ust=1746196114633000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPj4nfq9go0DFQAAAAAdAAAAABAE"
+       "immagine":"https://m.media-amazon.com/images/I/61lcBABtG4L.__AC_SX300_SY300_QL70_ML2_.jpg"
     },
     {
        "categoria":"computer",
        "nome":"laptop HP 15",
        "descrizione":"Intel i7, 16GB RAM, SSD 512GB",
        "prezzo":"1199 euro",
-       "immagine":"https://www.google.it/imgres?q=laptop%20hp&imgurl=https%3A%2F%2Fwww.hp.com%2Fit-it%2Fshop%2FHtml%2FMerch%2FImages%2Fc08651474_1750x1285.jpg&imgrefurl=https%3A%2F%2Fwww.hp.com%2Fit-it%2Fshop%2Fproduct.aspx%3Fid%3Da1st5ea%26opt%3Dabz%26sel%3Dntb&docid=wQNMRjapshoI9M&tbnid=xN1F0moXRJSujM&vet=12ahUKEwjB2suKvoKNAxX5S0EAHXSWDy4QM3oECBcQAA..i&w=1750&h=1285&hcb=2&ved=2ahUKEwjB2suKvoKNAxX5S0EAHXSWDy4QM3oECBcQAA"
+       "immagine":"https://www.hp.com/it-it/shop/media/catalog/product/h/p/hp-15-laptop-pc-sebastian-silver-front_cus_3.jpg?store=it-it&image-type=image&auto=webp&format=pjpg&type=image-product&width=960&height=800&fit=bounds&quality=90"
     },
     {
        "categoria":"elettrodomestico",
        "nome":"Frigorifero LG",
        "descrizione":"Classe A++, display touch, WiFi",
        "prezzo":"699 euro",
-       "immagine":"https://www.google.it/imgres?q=frigo%20lg&imgurl=https%3A%2F%2Fwww.lg.com%2Fcontent%2Fdam%2Fchannel%2Fwcms%2Fit%2Fimages%2Ffrigoriferi%2Fgmq844mc5e_amcqeur_eeis_it_c%2Fgallery%2Flg-frigorifero-GMQ844MC5E-medium01.jpg&imgrefurl=https%3A%2F%2Fwww.lg.com%2Fit%2Ffrigoriferi%2Fmultidoor%2Fgmq844mc5e%2F&docid=I9cn_hMSCrwchM&tbnid=5vmwEkkeBrIYRM&vet=12ahUKEwj70IykvoKNAxUHa0EAHaaJHPMQM3oECBcQAA..i&w=1100&h=730&hcb=2&ved=2ahUKEwj70IykvoKNAxUHa0EAHaaJHPMQM3oECBcQAA"
+       "immagine":"https://www.lg.com/it/frigoriferi/multidoor/gmq844mc5e/#"
     }
  ]
