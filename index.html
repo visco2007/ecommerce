@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vetrina E-Commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>VISCOMI SHOP</h1>
+    <h1>VISCOMI SHOP ITALY</h1>
   </header>
 
   <main>
@@ -20,26 +20,32 @@
     <h3>Carrello</h3>
     <ul id="lista-carrello"></ul>
     <p id="totale">Totale: 0€</p>
+    <button id="checkout">Vai al pagamento</button>
   </aside>
 
   <footer>
-    <p>Viscomi Shop</p>
+    <p>Viscomi Shop, 20005, Pogliano Milanese, 3834567124</p>
   </footer>
+
   <script>
     const container = document.getElementById('vetrina');
     const listaCarrello = document.getElementById('lista-carrello');
     const totaleElemento = document.getElementById('totale');
     let totale = 0;
-  
+
     function aggiungiAlCarrello(prodotto) {
       const li = document.createElement('li');
       li.textContent = prodotto.nome + ' - ' + prodotto.prezzo + '€';
       listaCarrello.appendChild(li);
-  
+
       totale += parseFloat(prodotto.prezzo);
       totaleElemento.textContent = 'Totale: ' + totale.toFixed(2) + '€';
     }
-  
+
+    document.getElementById('checkout').addEventListener('click', function() {
+      window.location.href = 'pagamento.html';
+    });
+
     fetch('prodotti.json')
       .then(function(response) {
         return response.json();
@@ -48,18 +54,18 @@
         prodotti.forEach(function(prodotto) {
           const card = document.createElement('div');
           card.className = 'card';
-          card.innerHTML = 
+          card.innerHTML =
             '<img src="' + prodotto.immagine + '" alt="' + prodotto.nome + '">' +
             '<h3>' + prodotto.nome + '</h3>' +
             '<p>' + prodotto.descrizione + '</p>' +
             '<p class="price">' + prodotto.prezzo + '€</p>' +
             '<button class="btn">Aggiungi al carrello</button>';
-  
+
           const bottone = card.querySelector('button');
           bottone.addEventListener('click', function() {
             aggiungiAlCarrello(prodotto);
           });
-  
+
           container.appendChild(card);
         });
       })
@@ -69,3 +75,4 @@
   </script>
 </body>
 </html>
+
