@@ -10,126 +10,73 @@ body {
 header {
   background-color: green;
   color: white;
-  padding: 1em;
-}
-
-header h1 {
-  margin: 0;
+  padding: 10px;
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin-top: 1em;
+  margin: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 1em;
+  margin: 0 10px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-main {
-  padding: 2em;
-}
-
-h2 {
-  color: darkgreen;
-}
-
-/* Vetrina prodotti */
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
-  margin-top: 2em;
+  margin: 20px;
 }
 
 .card {
-  border: 2px solid green;
-  padding: 1em;
-  width: 200px;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
   text-align: center;
   background-color: lightgreen;
-  border-radius: 10px;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
-}
-
-.price {
-  font-weight: bold;
-  color: darkgreen;
 }
 
 .btn {
-  background-color: darkgreen;
+  background-color: green;
   color: white;
   border: none;
-  padding: 0.5em 1em;
+  padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
-  margin-top: 0.5em;
-  border-radius: 5px;
 }
 
-.btn:hover {
-  background-color: green;
-}
-
-#carrello {
+aside#carrello {
   position: fixed;
+  top: 80px;
   right: 0;
-  top: 100px;
   width: 250px;
-  background-color: lightgrey;
-  padding: 1em;
-  border-left: 3px solid darkgreen;
+  background-color: lightgray;
+  padding: 10px;
   text-align: left;
 }
 
-#carrello h3 {
-  text-align: center;
-}
-
-#lista-carrello {
-  list-style: none;
-  padding: 0;
-}
-
-#totale {
-  font-weight: bold;
-  margin-top: 1em;
-}
-
-#checkout {
-  background-color: green;
+#paga {
+  margin-top: 10px;
+  background-color: darkgreen;
   color: white;
   border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
+  padding: 10px;
   width: 100%;
-  margin-top: 1em;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
-#checkout:hover {
-  background-color: darkgreen;
-}
-
-footer {
-  background-color: green;
-  color: white;
-  padding: 1em;
-  position: relative;
-  margin-top: 2em;
-}
 
